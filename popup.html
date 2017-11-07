@@ -1,0 +1,53 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Shortcut Instructions here</title>
+    <style type="text/css">
+      body {
+        margin: 55;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <h1>GeekyKeys - Page Switcher</h1>    
+    <div style="float: left; width: 25%;">
+      <h3>Mac:</h3>
+      <ul>
+        <li>Previous Page - Control+Shift+Left</li>
+        <li>Next Page - Control+Shift+Right</li>
+        <li>Search Bar - Alt+Shift+S</li>
+      </ul>
+      <h3>Windows:</h3>
+      <ul>
+        <li>Previous Page - Alt+Shift+Left</li>
+        <li>Next Page - Alt+Shift+Right</li>
+        <li>Search Bar - Alt+Shift+S</li>
+      </ul>
+    </div>
+  </body>
+</html>
